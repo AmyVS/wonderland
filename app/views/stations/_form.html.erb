@@ -1,7 +1,7 @@
 <%= form_for(@station) do |f| %>
   <div class="form-group">
-      <%= f.label :name %>
-      <%= f.text_field :name %>
+    <%= f.label :name %>
+    <%= f.text_field :name, :placeholder => "New station name..."%>
   </div>
-  <%= f.submit(:class => "btn btn-default") %>
+  <%= f.submit("Enter",:class => "btn") %>
 <% end %>

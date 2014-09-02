@@ -9,7 +9,7 @@ class LinesController < ApplicationController
   end
 
   def create
-    @line = Line.create(params[:line])
+    @line = Line.create(lines_params)
     if @line.valid?
       flash[:notice] = "Line created."
       redirect_to lines_path
@@ -28,7 +28,7 @@ class LinesController < ApplicationController
 
   def update
     @line = Line.find(params[:id])
-    if @line.update(params[:line])
+    if @line.update(lines_params)
       flash[:notice] = "Line updated."
       redirect_to line_path(@line)
     else
@@ -43,4 +43,8 @@ class LinesController < ApplicationController
     redirect_to line_path
   end
 
+private
+  def lines_params
+    params.require(:line).permit(:id, :name)
+  end
 end
