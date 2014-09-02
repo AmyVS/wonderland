@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root :to => 'station#index'
+  root :to => 'stations#index'
   resources :stations
-  resources :line
+  resources :lines
 end
