@@ -1,4 +1,4 @@
-class LineController < ApplicationController
+class LinesController < ApplicationController
 
   def index
     @lines = Line.all

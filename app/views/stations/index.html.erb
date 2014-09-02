@@ -1,0 +1,13 @@
+<h1>Stations</h1>
+
+<p>Here are all of the stations available:</p>
+<ul><% @stations.each do |station| %>
+  <li><%= station.name %></li>
+<% end %>
+</ul>
+
+<div class='lower-link'>
+<%= link_to "Click here to see all lines", line_index_path %>
+<br>
+<%= link_to "Click here to make a new station", new_station_path %>
+</div>

@@ -1,4 +1,4 @@
-class StationController < ApplicationController
+class StationsController < ApplicationController
 
   def index
     @stations = Station.all
@@ -9,7 +9,7 @@ class StationController < ApplicationController
   end
 
   def create
-    @station = Station.new(params[:station])
+    @station = Station.new(station_params)
     if @station.save
       flash[:notice] = "Station created."
       redirect_to stations_path
@@ -28,7 +28,7 @@ class StationController < ApplicationController
 
   def update
     @station = Station.find(params[:id])
-    if @station.update(params[:station])
+    if @station.update(station_params)
       flash[:notice] = "Station updated."
       redirect_to station_path(@station)
     else
@@ -41,6 +41,11 @@ class StationController < ApplicationController
     @station.destroy
     flash[:notice] = "Station deleted."
     redirect_to contacts_path
+  end
+
+private
+  def station_params
+    params.require(:station).permit(:id, :name)
   end
 end
 

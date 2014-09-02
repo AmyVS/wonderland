@@ -13,3 +13,27 @@ ul {
 h1  {
   text-decoration: underline;
 }
+
+.lower-link {
+  margin-top: 10%;
+}
+
+a:link {
+  color: #453E3A;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #453E3A;
+  text-decoration: none;
+}
+
+a:hover  {
+  color: black;
+}
+
+a:active {
+  color: #453E3A;
+}
+
+
