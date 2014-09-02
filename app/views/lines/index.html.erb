@@ -2,7 +2,7 @@
 
 <p>Here are all of the lines available:</p>
 <ul><% @lines.each do |line| %>
-  <li><%= line.name %></li>
+  <li><%= link_to "#{line.name}", line_path(line) %></li>
 <% end %>
 </ul>
 
