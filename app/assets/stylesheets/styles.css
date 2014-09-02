@@ -1,0 +1,15 @@
+body {
+  background-color: #EAD1C6;
+  font-family: 'Oswald', sans-serif, #453E3A;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+h1  {
+  text-decoration: underline;
+}

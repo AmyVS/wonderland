@@ -1,4 +1,4 @@
-class StationsController < ApplicationController
+class StationController < ApplicationController
 
   def index
     @stations = Station.all
@@ -9,8 +9,8 @@ class StationsController < ApplicationController
   end
 
   def create
-    @stations = Station.new(params[:stations])
-    if @stations.save
+    @station = Station.new(params[:station])
+    if @station.save
       flash[:notice] = "Station created."
       redirect_to stations_path
     else

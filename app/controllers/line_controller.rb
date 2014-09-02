@@ -1,7 +1,7 @@
-class Line < ApplicationController
+class LineController < ApplicationController
 
   def index
-    @lines = Lines.all
+    @lines = Line.all
   end
 
   def new
@@ -28,7 +28,7 @@ class Line < ApplicationController
 
   def update
     @line = Line.find(params[:id])
-    if line.update(params[:line])
+    if @line.update(params[:line])
       flash[:notice] = "Line updated."
       redirect_to line_path(@line)
     else

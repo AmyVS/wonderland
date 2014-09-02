@@ -1,0 +1,13 @@
+<% content_for(:title, "New Station | Wonderland") %>
+
+<h1>Stations</h1>
+
+<p>Here are all of the stations available:</p>
+<ul><% @stations.each do |station| %>
+  <li><%= station.name %></li>
+<% end %>
+</ul>
+
+<%= render('layouts/errors', :object => @station) %>
+
+<%= render('form') %>

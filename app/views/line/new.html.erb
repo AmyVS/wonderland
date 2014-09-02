@@ -1,0 +1,15 @@
+<% content_for(:title, "New Line | Wonderland") %>
+
+<h1>Lines</h1>
+
+<p>Here are all of the lines available:</p>
+<ul><% @lines.each do |line| %>
+  <li><%= line.name %></li>
+<% end %>
+</ul>
+
+<h1>New Line</h1>
+
+<%= render('layouts/errors', :object => @line) %>
+
+<%= render('form') %>

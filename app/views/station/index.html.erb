@@ -1,0 +1,18 @@
+<h1>Stations</h1>
+
+<p>Here are all of the stations available:</p>
+<ul><% @stations.each do |station| %>
+  <li><%= station.name %></li>
+<% end %>
+</ul>
+
+<h1>Lines</h1>
+
+<p>Here are all of the lines available:</p>
+<ul><% @stations.each do |station| %>
+
+  <li><%= line.name %></li>
+<% end %>
+</ul>
+
+<%= link_to "Lines", line_index_path, :class => "btn btn-default" %>
