@@ -13,3 +13,11 @@
   <%= link_to "Click to create a new stop", new_stop_path %> |
   <%= link_to "Click here to make a new station", new_station_path %>
 </div>
+
+<div class='transform'>
+  <p><%= link_to "Edit", edit_station_path(@station) %> |
+  <%= link_to "Delete", station_path(@station),
+                        data: {confirm: "Who are YOU? Are you sure?",
+                                method: "delete"},
+                        :class => "btn btn-danger" %></p>
+</div>
