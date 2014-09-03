@@ -38,7 +38,11 @@ a:active {
 
 .form-idable {
   text-align:; center;
-  padding: 25%;
+  padding: 10%;
 }
 
+img {
+  height: 10%;
+  width: 60%;
+}
 

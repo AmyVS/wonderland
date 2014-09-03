@@ -9,10 +9,14 @@
 <body>
   <link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
 
-<%= flash[:alert] %>
-<%= flash[:notice] %>
+<div class="header">
+  <%= image_tag("Wonderland.jpeg", :alt => "image of Cheshire cat") %>
+</div>
 
 <%= yield %>
+
+<%= flash[:alert] %>
+<%= flash[:notice] %>
 
 </body>
 </html>
