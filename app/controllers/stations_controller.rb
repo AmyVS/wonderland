@@ -40,7 +40,7 @@ class StationsController < ApplicationController
     @station = Station.find(params[:id])
     @station.destroy
     flash[:notice] = "Station deleted."
-    redirect_to contacts_path
+    redirect_to station_path
   end
 
 private
