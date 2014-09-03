@@ -11,6 +11,7 @@ class LinesController < ApplicationController
   def create
     @line = Line.create(lines_params)
     if @line.valid?
+      @line.station_ids = params[:line][:station_ids]
       flash[:notice] = "Line created."
       redirect_to lines_path
     else
@@ -45,6 +46,6 @@ class LinesController < ApplicationController
 
 private
   def lines_params
-    params.require(:line).permit(:id, :name)
+    params.require(:line).permit(:id, :name, station_ids: [])
   end
 end

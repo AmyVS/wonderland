@@ -11,6 +11,7 @@ class StationsController < ApplicationController
   def create
     @station = Station.new(station_params)
     if @station.save
+      @station.line_ids = params[:station][:line_ids]
       flash[:notice] = "Station created."
       redirect_to stations_path
     else
@@ -45,7 +46,7 @@ class StationsController < ApplicationController
 
 private
   def station_params
-    params.require(:station).permit(:id, :name)
+    params.require(:station).permit(:id, :name, line_ids: [])
   end
 end
 

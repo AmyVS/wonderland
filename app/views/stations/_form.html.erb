@@ -3,5 +3,10 @@
     <%= f.label :name %>
     <%= f.text_field :name, :placeholder => "New station name..."%>
   </div>
+  <div class="checkbox">
+    <%= f.collection_check_boxes :line_ids, Line.all, :id, :name do |b| %>
+      <%= b.check_box %> <%= b.label %><br>
+    <% end %>
+  </div>
   <%= f.submit("Enter",:class => "btn") %>
 <% end %>
