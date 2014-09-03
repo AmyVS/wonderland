@@ -1,0 +1,12 @@
+<h1>Stops</h1>
+
+<p>Here are all of the stops available:</p>
+<ul><% @stops.each do |stops| %>
+  <li><%= stops.station.name %> | <%= stops.line.name %></li>
+<% end %>
+</ul>
+
+<div class='lower-link'>
+<%= link_to "Click here to see all lines", lines_path %> |
+<%= link_to "Click here to see all stations", stations_path %> |
+</div>

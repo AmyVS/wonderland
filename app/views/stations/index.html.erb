@@ -8,11 +8,6 @@
 
 <div class='lower-link'>
 <%= link_to "Click here to see all lines", lines_path %> |
+<%= link_to "Click to create a new stop", new_stop_path %> |
 <%= link_to "Click here to make a new station", new_station_path %>
-</div>
-
-<div class='dropdown'>
-
-  <%= f.collection_select :station_id, Station.all, :id, :name %>
-
 </div>

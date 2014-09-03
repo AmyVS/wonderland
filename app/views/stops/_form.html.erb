@@ -1,0 +1,13 @@
+<%= render("layouts/errors", :object => @stop) %>
+
+<%= form_for (@stop) do |f| %>
+  <p>Choose a station</p>
+    <div class = "form-group">
+    <%= f.collection_select :station_id, Station.all, :id, :name %>
+  </div>
+  <p> Choose a line</p>
+    <div class = "form-group">
+    <%= f.collection_select :line_id, Line.all, :id, :name %>
+  </div>
+  <%= f.submit(:class => "btn") %>
+<% end %>
