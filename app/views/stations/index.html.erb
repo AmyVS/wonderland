@@ -2,7 +2,7 @@
 
 <p>Here are all of the stations available:</p>
 <ul><% @stations.each do |station| %>
-  <li><%= station.name %></li>
+  <li><%= link_to "#{station.name}", station_path(station) %></li>
 <% end %>
 </ul>
 
