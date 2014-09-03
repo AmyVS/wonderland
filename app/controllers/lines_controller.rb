@@ -40,7 +40,7 @@ class LinesController < ApplicationController
     @line = Line.find(params[:id])
     @line.destroy
     flash[:notice] = "Line deleted."
-    redirect_to line_path
+    redirect_to lines_path
   end
 
 private
